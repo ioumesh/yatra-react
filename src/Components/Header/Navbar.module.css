@@ -1,0 +1,205 @@
+.MainHeader {
+  width: 100vw;
+  height: 70px;
+  text-align: left;
+  left: 0px;
+  position: fixed;
+  z-index: 1;
+  background-color: white;
+  border: 0px;
+  outline: 0px;
+  box-shadow: 0px 2px 5px lightgrey;
+  position: fixed;
+  top: 0;
+}
+
+.header {
+  max-width: 1248px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 70px;
+  justify-content: space-between;
+}
+
+.AppLogo {
+  height: 39.5px;
+  width: 10%;
+  display: inline-block;
+  background: url(//www.yatra.com/fresco/resources/beetle/images/newIcons/yatra_logo.svg)
+    no-repeat;
+  background-size: 88px 39.5px;
+}
+.IconsAndTextWraper {
+  display: flex;
+  align-items: center;
+  width: 500px;
+  height: 100%;
+  justify-content: space-between;
+  color: rgb(102, 102, 102);
+  font-family: sans-serif;
+}
+
+.IconsAndText {
+  cursor: pointer;
+  text-align: center;
+  text-transform: capitalize;
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.IconsAndText:hover,
+.IconsAndText:active {
+  color: #f34f4f;
+  box-shadow: inset 0 -5px #f34f4f;
+}
+.Icons {
+  font-size: 1.1em !important;
+}
+.Text {
+  font-size: 13px;
+}
+.new {
+  position: absolute;
+  top: 8px;
+  left: 15px;
+  font-size: 7px !important;
+  background: #f84d52;
+  padding: 2px 5px;
+  color: #fff !important;
+  border-radius: 7px;
+  text-transform: uppercase;
+  line-height: 10px;
+  font-weight: 500;
+  border: 2px solid #fff;
+}
+.MoreIconsAndText {
+  font-size: 13px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: 1px solid gray;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.MoreOption {
+  padding: 3px 5px;
+  border-radius: 10px;
+}
+
+.MoreIconsAndText:hover,
+.MoreIconsAndText:active {
+  background: #f34f4f;
+  color: whitesmoke;
+  border: 1px solid #f34f4f;
+  border-radius: 10px;
+}
+.OtherInformationWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 500;
+}
+.OtherInformation {
+  position: relative;
+  top: 5px;
+}
+.joinPrime {
+  height: 68px;
+  background: url(https://www.yatra.com/fresco/resources/toucan/dist/images/prime-join-logo.svg?1a3a236359b0109e0e13c9ba943879c7)
+    50% no-repeat;
+  width: 70px;
+}
+.ArrowDown {
+  position: relative;
+  top: 8px;
+}
+
+.SubMenu1 {
+  display: none;
+}
+.MoreIconsAndText:hover .SubMenu1 {
+  display: block;
+  color: black;
+  position: absolute;
+  top: 30px;
+  width: 150px;
+  background: rgb(255, 254, 254);
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  padding: 5px;
+  box-shadow: 0px 2px 5px lightgrey;
+  text-align: center;
+}
+
+.ListItems {
+  padding: 10px 20px;
+}
+
+.MoreIconsAndText:hover .SubMenu1 .ListItems {
+  list-style-type: none;
+  display: flex;
+}
+.MoreIconsAndText:hover .SubMenu1 .ListItems:hover {
+  color: rgb(234, 35, 48);
+}
+
+.Labels {
+  margin-left: 10px;
+  text-transform: capitalize;
+}
+
+.AccountInfo {
+  position: relative;
+  left: 63%;
+  bottom: 20%;
+  background: white;
+  width: 7%;
+  border: 1px solid lightgrey;
+  padding: 10px 5px;
+  font-size: 13px;
+  border-radius: 10px;
+}
+.MyAccountWrapper:hover .AccountInfo {
+  display: block !important;
+  color: black;
+  position: absolute;
+}
+.support {
+  position: relative;
+}
+.supportNew {
+  position: absolute;
+  top: -5px;
+  right: 10px;
+  font-size: 7px !important;
+  background: #f84d52;
+  padding: 2px 5px;
+  color: #fff !important;
+  border-radius: 7px;
+  text-transform: uppercase;
+  line-height: 10px;
+  font-weight: 500;
+  border: 2px solid #fff;
+}
+.TwoButtons button {
+  border: none;
+  border-radius: 5px;
+  background-color: #ea2231;
+  width: 50px;
+  padding: 8px;
+  font-size: 12px;
+  color: white;
+  margin: 2px;
+}
