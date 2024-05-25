@@ -7,7 +7,8 @@ import DirectionsBusIcon from "@material-ui/icons/DirectionsBus";
 import LocalTaxiIcon from "@material-ui/icons/LocalTaxi";
 import PaymentIcon from "@material-ui/icons/PaymentOutlined";
 import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
-import { Redirect } from "react-router-dom/cjs/react-router-dom";
+import { useNavigate } from "react-router-dom";
+
 const Navbar = () => {
   const [AccountInfo, setAccountInfo] = useState(false);
   const [redirectToLogin, setRedirectToLogin] = useState(false);
@@ -15,7 +16,7 @@ const Navbar = () => {
   const [redirectToDashboard, setRedirectToDashboard] = useState(false);
   const [activeIcon, setActiveIcon] = useState(1);
   const token = false;
-
+  const navigate = useNavigate();
   const visibleIcons = [
     {
       id: 1,
@@ -51,15 +52,15 @@ const Navbar = () => {
     },
   ];
   if (redirectToLogin) {
-    return <Redirect to={`/signin`} />;
+    navigate("/signin");
   }
   if (redirectToSignUp) {
-    return <Redirect to={`/signup`} />;
+    navigate("/signup");
   }
-  if (redirectToDashboard) {
-    return <Redirect to={`/dashboard`} />;
-  }
-
+  const handleActive = (id) => {
+    setActiveIcon(id);
+    navigate("/");
+  };
   return (
     <header className={styles.MainHeader}>
       <div className={styles.header}>
@@ -71,7 +72,7 @@ const Navbar = () => {
                 className={`${styles.IconsAndText} ${
                   activeIcon === item.id ? styles.active : ""
                 }`}
-                onClick={() => setActiveIcon(item.id)}
+                onClick={() => handleActive(item.id)}
               >
                 <div className={styles.Icons}>{item.icon}</div>
                 <div className={styles.Text}>{item.label}</div>
