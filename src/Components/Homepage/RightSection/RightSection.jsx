@@ -3,7 +3,6 @@ import styled from "styled-components";
 import DownloadYatra from "./DownloadYatra";
 import ExtraDescription from "./ExtraDescription";
 import { ImageSection } from "./ImageSection";
-import { ImageSection2 } from "./ImageSection2";
 import { PopularFlightRoutes } from "./PopularFlightRoutes";
 import { RecentSearch } from "./RecentSearch";
 import YatraSpecials from "./YatraSpecials";
@@ -30,8 +29,7 @@ function RightSection() {
       <RecentSearch />
       <PopularFlightRoutes routeType="domestic" />
       <PopularFlightRoutes routeType="international" />
-      <ImageSection2 />
-      <DownloadYatra />
+      {/* <DownloadYatra /> */}
       <ExtraDescription />
     </RightContainer>
   );

@@ -13,6 +13,7 @@ const Navbar = () => {
   const [redirectToLogin, setRedirectToLogin] = useState(false);
   const [redirectToSignUp, setRedirectToSignUp] = useState(false);
   const [redirectToDashboard, setRedirectToDashboard] = useState(false);
+  const [activeIcon, setActiveIcon] = useState(1);
   const token = false;
 
   const visibleIcons = [
@@ -66,7 +67,12 @@ const Navbar = () => {
         <div className={styles.IconsAndTextWraper}>
           {visibleIcons.map((item) => {
             return (
-              <div className={styles.IconsAndText}>
+              <div
+                className={`${styles.IconsAndText} ${
+                  activeIcon === item.id ? styles.active : ""
+                }`}
+                onClick={() => setActiveIcon(item.id)}
+              >
                 <div className={styles.Icons}>{item.icon}</div>
                 <div className={styles.Text}>{item.label}</div>
                 {item.isNew && <div className={styles.new}>New</div>}
@@ -119,6 +125,7 @@ const Navbar = () => {
             ) : (
               <div></div>
             )}
+            <div>My Bookings</div>
             <div>My Refund</div>
           </div>
           {token ? (
