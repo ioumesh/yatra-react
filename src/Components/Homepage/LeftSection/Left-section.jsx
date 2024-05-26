@@ -1,19 +1,13 @@
 import React, { useState } from "react";
 import styles from "./Css/Left-section.module.css";
 import ArrowForwardOutlinedIcon from "@mui/icons-material/ArrowForwardOutlined";
-import { YatraDatePicker } from "./../../Utility/YatraDatePicker";
+import { FlightBookingDatePicker } from "../../Utility/FlightBookingDatePicker";
 
 function Leftsection() {
   const [countAdult, setAdultCount] = useState(1);
   const [countChild, setChildCount] = useState(0);
   const [countInfant, setInfantCount] = useState(0);
   const [selectPreference, setSelectPreference] = useState(false);
-
-  const handleDateChange = (date) => {
-    date = new Date(date).toISOString();
-    var any = date.split("T")[0];
-    setFlightBookingData({ ...flightBookingData, departureDate: any });
-  };
 
   const handlePreference = () => {
     setSelectPreference((prev) => !prev);
@@ -50,7 +44,7 @@ function Leftsection() {
             </div>
             <div className={styles.dbg}>
               <div className={styles.dep}>
-                <div style={{ fontSize: "14px", color: "#A19F9D" }}>
+                <div style={{ fontSize: "14px", color: "#999" }}>
                   Depart From
                 </div>
                 <div
@@ -80,9 +74,7 @@ function Leftsection() {
                 </button>
               </div>
               <div className={styles.goi}>
-                <div style={{ fontSize: "14px", color: "#A19F9D" }}>
-                  Going To
-                </div>
+                <div style={{ fontSize: "14px", color: "#999" }}>Going To</div>
                 <div
                   style={{
                     width: "50%",
@@ -100,24 +92,22 @@ function Leftsection() {
                 <input name={"destination"} type="text" />
               </div>
             </div>
-            <div className={styles.depRetDate}>
-              <div className={styles.depDate}>
-                <label style={{ fontSize: "14px", color: "#A19F9D" }}>
+            <div className={styles.flightDate}>
+              <div className={styles.flightInfo}>
+                <span style={{ fontSize: "14px", color: "#999" }}>
                   Departure Date
-                </label>
-                <YatraDatePicker handleDateChange={handleDateChange} />
-              </div>
-              <div className={styles.retDate}>
-                <div
-                  style={{ fontSize: "14px", width: "100px", color: "#A19F9D" }}
-                >
-                  Return date
+                </span>
+                <div className={styles.flightReturn}>
+                  <span style={{ fontSize: "14px", color: "#999" }}>
+                    Return Date
+                  </span>
                 </div>
-                <YatraDatePicker />
               </div>
+              <FlightBookingDatePicker />
             </div>
+
             <div onClick={handlePreference} className={styles.trav}>
-              <label style={{ color: "#A19F9D", fontSize: "13px" }}>
+              <label style={{ color: "#999", fontSize: "13px" }}>
                 Traveller(s), class
               </label>
               <div className={styles.traIco}>
@@ -311,7 +301,7 @@ function Leftsection() {
             <div className={styles.nonStop}>
               <div>
                 <div>
-                  <input type="checkbox"  checked/>
+                  <input type="checkbox" checked />
                   Non Stop Services
                 </div>
                 <div>

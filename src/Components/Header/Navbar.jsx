@@ -1,12 +1,12 @@
 import styles from "./Navbar.module.css";
 import { useState } from "react";
-import FlightIcon from "@material-ui/icons/Flight";
-import HotelIcon from "@material-ui/icons/Hotel";
-import HouseIcon from "@material-ui/icons/BeachAccess";
-import DirectionsBusIcon from "@material-ui/icons/DirectionsBus";
-import LocalTaxiIcon from "@material-ui/icons/LocalTaxi";
-import PaymentIcon from "@material-ui/icons/PaymentOutlined";
-import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
+import FlightIcon from "@mui/icons-material/Flight";
+import HotelIcon from "@mui/icons-material/Hotel";
+import HouseIcon from "@mui/icons-material/BeachAccess";
+import DirectionsBusIcon from "@mui/icons-material/DirectionsBus";
+import LocalTaxiIcon from "@mui/icons-material/LocalTaxi";
+import PaymentIcon from "@mui/icons-material/PaymentOutlined";
+import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {

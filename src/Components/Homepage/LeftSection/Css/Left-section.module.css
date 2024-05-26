@@ -21,7 +21,7 @@
 }
 .r1 {
   padding: 15px;
-  font-size: 1.1em;
+  font-size: 16px;
   letter-spacing: 0.04em;
   font-weight: 700;
 }
@@ -93,34 +93,26 @@
   height: min-content;
   background-color: white;
 }
-.depRetDate {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  gap: 5px;
+.flightDate {
   padding: 16px;
 }
-.depDate {
+.flightInfo {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  gap: 4px;
-  align-items: flex-start;
-  padding: 4px;
-  /* border-bottom: 1px solid #333; */
-}
-.retDate {
-  display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: space-between;
-  align-items: flex-end;
-  gap: 4px;
-  padding: 4px;
-  flex-wrap: wrap;
-  /* border-bottom: 1px solid #333; */
+  margin-bottom: 20px;
 }
-
+.flightReturn {
+  display: flex;
+  flex-direction: column;
+}
+.saveTrip {
+  width: 110px;
+  color: #2a92c5;
+  font-weight: 500;
+  text-align: right;
+  font-size: 14px;
+}
 .trav {
   display: flex;
   flex-direction: column;
