@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const StyledHomepageBody = styled.div`
     display: flex;
-    background-color: white;
+    background-color:#fdfafa;
     max-width: 1440px;
 
     @media all and (max-width: 900px) {
